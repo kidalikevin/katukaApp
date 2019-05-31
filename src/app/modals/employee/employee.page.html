@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <button ion-button icon-only (click)="closeModal()">
+      <ion-icon name="close"></ion-icon>
+    </button>
+
+    <ion-title>{{ value }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="grid">
+    <ion-row class="rows">
+      <ion-col class="header-columns">
+        <div>
+          <p class="titles">Asset</p>
+        </div>
+      </ion-col>
+      <ion-col class="header-columns">
+        <div>
+          <p class="titles">Dispatched</p>
+        </div>
+      </ion-col>
+      <ion-col class="header-columns">
+        <div>
+          <p class="titles">Date</p>
+        </div>
+      </ion-col>
+      <ion-col class="header-columns">
+        <div>
+          <p class="titles">Status</p>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="rows" *ngFor="let software of softwareEngineer">
+      <ion-col class="row-columns">
+        <div>
+          <p class="content-text">{{ software.asset }}</p>
+        </div>
+      </ion-col>
+      <ion-col class="row-columns">
+        <div>
+          <p class="content-text content-text-values">False</p>
+        </div>
+      </ion-col>
+      <ion-col class="row-columns">
+        <div>
+          <p class="content-text content-text-values">20<sup>th</sup>-12-2018</p>
+        </div>
+      </ion-col>
+      <ion-col class="row-columns">
+        <div>
+          <p class="content-text content-text-values">Pending</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

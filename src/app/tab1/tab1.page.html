@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Employees
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let user of users" (click)="openModal(user)">
+      <ion-avatar slot="end">
+        <img [src]="user.avatar" />
+      </ion-avatar>
+      <ion-label><p class="labels">{{ user.name }}</p><p class="asset-text">{{ user.asset }}</p></ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

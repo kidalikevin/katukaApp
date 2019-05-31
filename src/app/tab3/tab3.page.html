@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar  color="primary">
+    <ion-title>
+      Notifications
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let notify of notifications">
+    <ion-card-content>
+      <p class="notification-text" [innerHTML]="notify.message"></p>
+      <p class="time">{{ notify.created }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
